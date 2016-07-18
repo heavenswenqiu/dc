@@ -26,7 +26,6 @@ fis.media('web').match('**', {
 //fis-parser-node-sass
 fis.match('*.scss', {
 	parser: fis.plugin('node-sass'),
-	userMap: true,
 	rExt: '.css',
 })
 //fis3-parser-typescript es6 typescript
