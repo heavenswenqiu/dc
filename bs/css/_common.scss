@@ -1,0 +1,77 @@
+//基础库
+//设置字体单位
+$ui_size: 640!default; //效果图的尺寸
+$w_size: 640 !default; //真实的尺寸
+$w_scalse: $w_size/320 !default; //视口缩放
+$scale: $w_size/$ui_size !default; //效果图:视口
+$co: 10 !default; //设置一个默认倍数,原意是1/16 chrome 下12px的问题改为10 配合640 0.5视口回避chrome的问题
+$font: $co/16 !default; //换算大小
+@function size($num, $unit:rem) {
+    @if $unit == px {
+        @return $num*$scale+$unit;
+    }
+    @else {
+        @return $num*$scale/$co+$unit;
+    }
+}
+//定位
+@mixin box-mid{
+    position: absolute;
+    top: 50%;
+    margin: auto;
+    @include transform(translateY(-50%));
+}
+//需要高度居中
+@mixin box-pos-mid($types:(top, bottom, left, right)) {
+    position: absolute;
+    @each $type in $types {
+        $type: 0;
+    }
+    margin: auto;
+}
+//样式
+$b-color: #ccc !default; //默认边框颜色
+$n-color: #3af !default; //默认导航条颜色
+$n-f-color:#fff!default;//导航条上的字体
+$mark-color: rgba(0, 0, 0, 0.2)!default; //遮挡层
+$check-color: #57e9e7; //选中颜色
+$btn-color: #fff; //按钮颜色
+$f-color: #333; //一般字体颜色
+$orange: #ffca3b; //橘色
+$red: #ed6363; //红色
+$blue: #3ff; //蓝色
+//阴影
+@mixin shadow($x:0, $y:1, $b:1, $color:$mark-color, $inset:'') {
+    box-shadow: $inset size($x) size($y) size($b) $color $inset;
+}
+//过渡
+@mixin transition($type:all, $s:0.3, $delay:0, $ease:linear) {
+    transition: $type $s $delay $ease;
+    -webkit-transition: $type $s $delay $ease;
+}
+//扭曲
+@mixin transform($type...) {
+    transform: $type;
+    -webkit-transform: $type;
+}
+//给对象添加固定padding
+@mixin padding($types:(left, right), $num:10) {
+    @each $type in $types {
+        padding-#{$type}: size(10);
+    }
+}
+//过渡效果集合
+//左滑页面
+@mixin swipe-left() {
+    & {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include transform(translate3d(100%,0,0));
+    }
+    &.active {
+        @include transform(translate3d(0,0,0));
+    }
+}

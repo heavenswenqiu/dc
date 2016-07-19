@@ -2,17 +2,15 @@
 <html lang="zh-CN">
 
 	<head>
-
 		<meta charset="utf-8">
-		<title>Bootstrap中文网</title>
+		<link rel="import" href="_mate.html?__inline" />
+		<title>大传前端UI框架-bs</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Bootstrap是Twitter推出的一个用于前端开发的开源工具包。它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。目前，Bootstrap最新版本为3.0 。">
 		<meta name="keywords" content="Bootstrap,CSS,CSS框架,CSS framework,javascript,bootcss,bootstrap开发,bootstrap代码,bootstrap入门">
-		<meta name="author" content="大传">
+		<meta name="author" content="大传科技">
 		<meta name="robots" content="index,follow">
 		<!-- Site CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/index.scss" rel="stylesheet" />
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -30,13 +28,13 @@
 			<div class="container">
 				<div class="navbar-header">
 					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">            
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-				<a class="navbar-brand hidden-sm">
-					大传科技-Bootstrap
-				</a>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+          			</button>
+					<a class="navbar-brand hidden-sm">
+						大传科技-Bootstrap
+					</a>
 				</div>
 				<div class="navbar-collapse collapse" role="navigation">
 					<ul class="nav navbar-nav">
@@ -47,7 +45,7 @@
 							<a href="code-guide.html">代码规范</a>
 						</li>
 						<li>
-							<a href="#se">安全色</a>
+							<a href="#safecolor">安全色</a>
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -63,7 +61,7 @@
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="#">其他</a>
+									<a href="#">按钮</a>
 								</li>
 							</ul>
 						</li>
@@ -80,24 +78,24 @@
 				</div>
 			</div>
 		</header>
-		<!--content-->
-		<section class="jumbotron masthead content">
+		<!--about bs-->
+		<section class="jumbotron masthead">
 			<div class="container" id="home">
 				<h1 class="text-center">Bootstrap</h1>
 				<h2 class="text-center">Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。</h2>
-				
+				<a class="button">
+					boostarp中文网
+				</a>
 			</div>
 		</section>
+		<!--安全色-->
+		<section class="page" id="safecolor" data-href='safe-html #page_wrap'></section>
 		<!-- container -->
 		<footer class="footer">
 
 		</footer>
-
-		<!-- Bootstrap core JavaScript
-    ================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="lib/jquery-2.1.0.js"></script>
-		<script src="lib/bootstrap.min.js"></script>
+		<link rel='import' href="_footer.html?__inline" />
+		<script src="js/loadeHtml.js"></script>
 	</body>
 
 </html>
