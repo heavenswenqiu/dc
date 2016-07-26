@@ -1,7 +1,5 @@
 $(function(){
-	$("body").scroll(function(){
-			
-	})
+	$("body").scroll()
 	function loadeHtml($o){
 		var html = $o.attr('data-href');
 		$o.load(html);
