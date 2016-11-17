@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<!-- Meta, title, CSS, favicons, etc. -->
+		<meta charset="utf-8">
+		<link rel="import" href="_mate.html?__inline" />
+		<title>
+
+			全局 CSS 样式 &middot; From Bootstrap v3 中文文档
+
+		</title>
+		<style>
+			.show-grid>div {
+				border: 1px solid #999;
+			}
+			
+			.top>li {
+				width: 50%;
+				float: left;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<header class="panel-heading bg-primary">
+			栅格化布局
+		</header>
+
+		<div class="panel  clearfix">
+			<h2 class="panel-heading">目录</h2>
+			<div class="panel-body">
+				<ul class="list-unstyled list-inline  top">
+					
+					<li class="">
+						<a href="#type">排版</a>
+					</li>
+					<li>
+						<a href="#code">代码</a>
+					</li>
+					<li>
+						<a href="#tables">表格</a>
+					</li>
+					<li>
+						<a href="#images">图片</a>
+					</li>
+					<li class="">
+						<a href="#helper-classes">辅助类</a>
+					</li>
+				
+					
+
+				</ul>
+
+			</div>
+		</div>
+		<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+			<div class="container"><span class="skiplink-text">Skip to main content</span></div>
+		</a>
+
+		<!-- Docs page layout -->
+		
+
+		<div class="container bs-docs-container">
+
+			<div class="row">
+				<div class="col-md-12" role="main">
+					<div class="bs-docs-section">
+						<h1 id="type" class="page-header">排版</h1>
+
+						<!-- Headings -->
+						<h2 id="type-headings">标题</h2>
+						<p>HTML 中的所有标题标签，<code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code> 均可使用。另外，还提供了 <code>.h1</code> 到 <code>.h6</code> 类，为的是给内联（inline）属性的文本赋予标题的样式。</p>
+						<div class="bs-example bs-example-type" data-example-id="simple-headings">
+							<table class="table">
+								<tbody>
+									<tr>
+										<td>
+											<h1>h1. Bootstrap heading</h1></td>
+										<td class="type-info">Semibold 36px</td>
+									</tr>
+									<tr>
+										<td>
+											<h2>h2. Bootstrap heading</h2></td>
+										<td class="type-info">Semibold 30px</td>
+									</tr>
+									<tr>
+										<td>
+											<h3>h3. Bootstrap heading</h3></td>
+										<td class="type-info">Semibold 24px</td>
+									</tr>
+									<tr>
+										<td>
+											<h4>h4. Bootstrap heading</h4></td>
+										<td class="type-info">Semibold 18px</td>
+									</tr>
+									<tr>
+										<td>
+											<h5>h5. Bootstrap heading</h5></td>
+										<td class="type-info">Semibold 14px</td>
+									</tr>
+									<tr>
+										<td>
+											<h6>h6. Bootstrap heading</h6></td>
+										<td class="type-info">Semibold 12px</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Bootstrap heading<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. Bootstrap heading<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. Bootstrap heading<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. Bootstrap heading<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. Bootstrap heading<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. Bootstrap heading<span class="nt">&lt;/h6&gt;</span></code></pre></div>
+
+						<p>在标题内还可以包含 <code>&lt;small&gt;</code> 标签或赋予 <code>.small</code> 类的元素，可以用来标记副标题。</p>
+						<div class="bs-example bs-example-type" data-example-id="small-headings">
+							<table class="table">
+								<tbody>
+									<tr>
+										<td>
+											<h1>h1. Bootstrap heading <small>Secondary text</small></h1></td>
+									</tr>
+									<tr>
+										<td>
+											<h2>h2. Bootstrap heading <small>Secondary text</small></h2></td>
+									</tr>
+									<tr>
+										<td>
+											<h3>h3. Bootstrap heading <small>Secondary text</small></h3></td>
+									</tr>
+									<tr>
+										<td>
+											<h4>h4. Bootstrap heading <small>Secondary text</small></h4></td>
+									</tr>
+									<tr>
+										<td>
+											<h5>h5. Bootstrap heading <small>Secondary text</small></h5></td>
+									</tr>
+									<tr>
+										<td>
+											<h6>h6. Bootstrap heading <small>Secondary text</small></h6></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Bootstrap heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. Bootstrap heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. Bootstrap heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. Bootstrap heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. Bootstrap heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. Bootstrap heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h6&gt;</span></code></pre></div>
+
+						<!-- Body copy -->
+						<h2 id="type-body-copy">页面主体</h2>
+						<p>Bootstrap 将全局 <code>font-size</code> 设置为 <strong>14px</strong>，<code>line-height</code> 设置为 <strong>1.428</strong>。这些属性直接赋予 <code>&lt;body&gt;</code> 元素和所有段落元素。另外，<code>&lt;p&gt;</code> （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）。</p>
+						<div class="bs-example" data-example-id="body-copy">
+							<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+							<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+						<!-- Body copy .lead -->
+						<h3>中心内容</h3>
+						<p>通过添加 <code>.lead</code> 类可以让段落突出显示。</p>
+						<div class="bs-example" data-example-id="lead-copy">
+							<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+						<!-- Using Less -->
+						<h3>使用 Less 工具构建</h3>
+						<p><strong>variables.less</strong> 文件中定义的两个 Less 变量决定了排版尺寸：<code>@font-size-base</code> 和 <code>@line-height-base</code>。第一个变量定义了全局 font-size 基准，第二个变量是 line-height 基准。我们使用这些变量和一些简单的公式计算出其它所有页面元素的 margin、 padding 和 line-height。自定义这些变量即可改变 Bootstrap 的默认样式。</p>
+
+						<!-- Inline text elements -->
+						<h2 id="type-inline-text">内联文本元素</h2>
+						<h3>Marked text</h3>
+						<p>For highlighting a run of text due to its relevance in another context, use the <code>&lt;mark&gt;</code> tag.</p>
+						<div class="bs-example" data-example-id="simple-mark">
+							<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html">You can use the mark tag to <span class="nt">&lt;mark&gt;</span>highlight<span class="nt">&lt;/mark&gt;</span> text.</code></pre></div>
+
+						<h3>被删除的文本</h3>
+						<p>对于被删除的文本使用 <code>&lt;del&gt;</code> 标签。</p>
+						<div class="bs-example" data-example-id="simple-del">
+							<p><del>This line of text is meant to be treated as deleted text.</del></p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class="nt">&lt;/del&gt;</span></code></pre></div>
+
+						<h3>无用文本</h3>
+						<p>对于没用的文本使用 <code>&lt;s&gt;</code> 标签。</p>
+						<div class="bs-example" data-example-id="simple-s">
+							<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span class="nt">&lt;/s&gt;</span></code></pre></div>
+
+						<h3>插入文本</h3>
+						<p>额外插入的文本使用 <code>&lt;ins&gt;</code> 标签。</p>
+						<div class="bs-example" data-example-id="simple-ins">
+							<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span class="nt">&lt;/ins&gt;</span></code></pre></div>
+
+						<h3>带下划线的文本</h3>
+						<p>为文本添加下划线，使用 <code>&lt;u&gt;</code> 标签。</p>
+						<div class="bs-example" data-example-id="simple-u">
+							<p><u>This line of text will render as underlined</u></p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;u&gt;</span>This line of text will render as underlined<span class="nt">&lt;/u&gt;</span></code></pre></div>
+
+						<p>利用 HTML 自带的表示强调意味的标签来为文本增添少量样式。</p>
+
+						<h3>小号文本</h3>
+						<p>对于不需要强调的inline或block类型的文本，使用 <code>&lt;small&gt;</code> 标签包裹，其内的文本将被设置为父容器字体大小的 85%。标题元素中嵌套的 <code>&lt;small&gt;</code> 元素被设置不同的 <code>font-size</code> 。</p>
+						<p>你还可以为行内元素赋予 <code>.small</code> 类以代替任何 <code>&lt;small&gt;</code> 元素。</p>
+						<div class="bs-example" data-example-id="simple-small">
+							<p><small>This line of text is meant to be treated as fine print.</small></p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;</span></code></pre></div>
+
+						<h3>着重</h3>
+						<p>通过增加 font-weight 值强调一段文本。</p>
+						<div class="bs-example" data-example-id="simple-strong">
+							<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;strong&gt;</span>rendered as bold text<span class="nt">&lt;/strong&gt;</span></code></pre></div>
+
+						<h3>斜体</h3>
+						<p>用斜体强调一段文本。</p>
+						<div class="bs-example" data-example-id="simple-em">
+							<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;em&gt;</span>rendered as italicized text<span class="nt">&lt;/em&gt;</span></code></pre></div>
+
+						<div class="bs-callout bs-callout-info" id="callout-type-b-i-elems">
+							<h4>Alternate elements</h4>
+							<p>在 HTML5 中可以放心使用 <code>&lt;b&gt;</code> 和 <code>&lt;i&gt;</code> 标签。<code>&lt;b&gt;</code> 用于高亮单词或短语，不带有任何着重的意味；而 <code>&lt;i&gt;</code> 标签主要用于发言、技术词汇等。</p>
+						</div>
+
+						<h2 id="type-alignment">对齐</h2>
+						<p>通过文本对齐类，可以简单方便的将文字重新对齐。</p>
+						<div class="bs-example" data-example-id="text-alignment">
+							<p class="text-left">Left aligned text.</p>
+							<p class="text-center">Center aligned text.</p>
+							<p class="text-right">Right aligned text.</p>
+							<p class="text-justify">Justified text.</p>
+							<p class="text-nowrap">No wrap text.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-left"</span><span class="nt">&gt;</span>Left aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Center aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-right"</span><span class="nt">&gt;</span>Right aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-justify"</span><span class="nt">&gt;</span>Justified text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-nowrap"</span><span class="nt">&gt;</span>No wrap text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+						<h2 id="type-transformation">改变大小写</h2>
+						<p>通过这几个类可以改变文本的大小写。</p>
+						<div class="bs-example" data-example-id="text-capitalization">
+							<p class="text-lowercase">Lowercased text.</p>
+							<p class="text-uppercase">Uppercased text.</p>
+							<p class="text-capitalize">Capitalized text.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lowercase"</span><span class="nt">&gt;</span>Lowercased text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-uppercase"</span><span class="nt">&gt;</span>Uppercased text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-capitalize"</span><span class="nt">&gt;</span>Capitalized text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+						<!-- Abbreviations -->
+						<h2 id="type-abbreviations">缩略语</h2>
+						<p>当鼠标悬停在缩写和缩写词上时就会显示完整内容，Bootstrap 实现了对 HTML 的 <code>&lt;abbr&gt;</code> 元素的增强样式。缩略语元素带有 <code>title</code> 属性，外观表现为带有较浅的虚线框，鼠标移至上面时会变成带有“问号”的指针。如想看完整的内容可把鼠标悬停在缩略语上（对使用辅助技术的用户也可见）, 但需要包含 title 属性。</p>
+
+						<h3>基本缩略语</h3>
+						<div class="bs-example" data-example-id="simple-abbr">
+							<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"attribute"</span><span class="nt">&gt;</span>attr<span class="nt">&lt;/abbr&gt;</span></code></pre></div>
+
+						<h3>首字母缩略语</h3>
+						<p>为缩略语添加 <code>.initialism</code> 类，可以让 font-size 变得稍微小些。</p>
+						<div class="bs-example" data-example-id="simple-initialism">
+							<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"HyperText Markup Language"</span> <span class="na">class=</span><span class="s">"initialism"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/abbr&gt;</span></code></pre></div>
+
+						<!-- Addresses -->
+						<h2 id="type-addresses">地址</h2>
+						<p>让联系信息以最接近日常使用的格式呈现。在每行结尾添加 <code>&lt;br&gt;</code> 可以保留需要的样式。</p>
+						<div class="bs-example" data-example-id="simple-address">
+							<address>
+      <strong>Twitter, Inc.</strong><br>
+      795 Folsom Ave, Suite 600<br>
+      San Francisco, CA 94107<br>
+      <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+							<address>
+      <strong>Full Name</strong><br>
+      <a href="mailto:#">first.last@example.com</a>
+    </address>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;address&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Twitter, Inc.<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+  795 Folsom Ave, Suite 600<span class="nt">&lt;br&gt;</span>
+  San Francisco, CA 94107<span class="nt">&lt;br&gt;</span>
+  <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Phone"</span><span class="nt">&gt;</span>P:<span class="nt">&lt;/abbr&gt;</span> (123) 456-7890
+<span class="nt">&lt;/address&gt;</span>
+
+<span class="nt">&lt;address&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Full Name<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:#"</span><span class="nt">&gt;</span>first.last@example.com<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/address&gt;</span></code></pre></div>
+
+						<!-- Blockquotes -->
+						<h2 id="type-blockquotes">引用</h2>
+						<p>在你的文档中引用其他来源的内容。</p>
+
+						<h3>默认样式的引用</h3>
+						<p>将任何 <abbr title="HyperText Markup Language">HTML</abbr> 元素包裹在 <code>&lt;blockquote&gt;</code> 中即可表现为引用样式。对于直接引用，我们建议用 <code>&lt;p&gt;</code> 标签。</p>
+						<div class="bs-example" data-example-id="simple-blockquote">
+							<blockquote>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+							</blockquote>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+						<h3>多种引用样式</h3>
+						<p>对于标准样式的 <code>&lt;blockquote&gt;</code>，可以通过几个简单的变体就能改变风格和内容。</p>
+
+						<h4>命名来源</h4>
+						<p>添加 <code>&lt;footer&gt;</code> 用于标明引用来源。来源的名称可以包裹进 <code>&lt;cite&gt;</code>标签中。</p>
+						<div class="bs-example" data-example-id="blockquote-cite">
+							<blockquote>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+								<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+							</blockquote>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+						<h4>另一种展示风格</h4>
+						<p>通过赋予 <code>.blockquote-reverse</code> 类可以让引用呈现内容右对齐的效果。</p>
+						<div class="bs-example" style="overflow: hidden;" data-example-id="blockquote-reverse">
+							<blockquote class="blockquote-reverse">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+								<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+							</blockquote>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote-reverse"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+						<!-- Lists -->
+						<h2 id="type-lists">列表</h2>
+
+						<h3>无序列表</h3>
+						<p>排列顺序<em>无关紧要</em>的一列元素。</p>
+						<div class="bs-example" data-example-id="simple-ul">
+							<ul>
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>Consectetur adipiscing elit</li>
+								<li>Integer molestie lorem at massa</li>
+								<li>Facilisis in pretium nisl aliquet</li>
+								<li>Nulla volutpat aliquam velit
+									<ul>
+										<li>Phasellus iaculis neque</li>
+										<li>Purus sodales ultricies</li>
+										<li>Vestibulum laoreet porttitor sem</li>
+										<li>Ac tristique libero volutpat at</li>
+									</ul>
+								</li>
+								<li>Faucibus porta lacus fringilla vel</li>
+								<li>Aenean sit amet erat nunc</li>
+								<li>Eget porttitor lorem</li>
+							</ul>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+						<h3>有序列表</h3>
+						<p>顺序<em>至关重要</em>的一组元素。</p>
+						<div class="bs-example" data-example-id="simple-ol">
+							<ol>
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>Consectetur adipiscing elit</li>
+								<li>Integer molestie lorem at massa</li>
+								<li>Facilisis in pretium nisl aliquet</li>
+								<li>Nulla volutpat aliquam velit</li>
+								<li>Faucibus porta lacus fringilla vel</li>
+								<li>Aenean sit amet erat nunc</li>
+								<li>Eget porttitor lorem</li>
+							</ol>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></code></pre></div>
+
+						<h3>无样式列表</h3>
+						<p>移除了默认的 <code>list-style</code> 样式和左侧外边距的一组元素（只针对直接子元素）。<strong>这是针对直接子元素的</strong>，也就是说，你需要对所有嵌套的列表都添加这个类才能具有同样的样式。</p>
+						<div class="bs-example" data-example-id="unstyled-list">
+							<ul class="list-unstyled">
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>Consectetur adipiscing elit</li>
+								<li>Integer molestie lorem at massa</li>
+								<li>Facilisis in pretium nisl aliquet</li>
+								<li>Nulla volutpat aliquam velit
+									<ul>
+										<li>Phasellus iaculis neque</li>
+										<li>Purus sodales ultricies</li>
+										<li>Vestibulum laoreet porttitor sem</li>
+										<li>Ac tristique libero volutpat at</li>
+									</ul>
+								</li>
+								<li>Faucibus porta lacus fringilla vel</li>
+								<li>Aenean sit amet erat nunc</li>
+								<li>Eget porttitor lorem</li>
+							</ul>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+						<h3>内联列表</h3>
+						<p>通过设置 <code>display: inline-block;</code> 并添加少量的内补（padding），将所有元素放置于同一行。</p>
+						<div class="bs-example" data-example-id="list-inline">
+							<ul class="list-inline">
+								<li>Lorem ipsum</li>
+								<li>Phasellus iaculis</li>
+								<li>Nulla volutpat</li>
+							</ul>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+						<h3>描述</h3>
+						<p>带有描述的短语列表。</p>
+						<div class="bs-example" data-example-id="simple-dl">
+							<dl>
+								<dt>Description lists</dt>
+								<dd>A description list is perfect for defining terms.</dd>
+								<dt>Euismod</dt>
+								<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+								<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+								<dt>Malesuada porta</dt>
+								<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+							</dl>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>...<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>...<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></code></pre></div>
+
+						<h4>水平排列的描述</h4>
+						<p><code>.dl-horizontal</code> 可以让 <code>&lt;dl&gt;</code> 内的短语及其描述排在一行。开始是像 <code>&lt;dl&gt;</code> 的默认样式堆叠在一起，随着导航条逐渐展开而排列在一行。</p>
+						<div class="bs-example" data-example-id="horizontal-dl">
+							<dl class="dl-horizontal">
+								<dt>Description lists</dt>
+								<dd>A description list is perfect for defining terms.</dd>
+								<dt>Euismod</dt>
+								<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+								<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+								<dt>Malesuada porta</dt>
+								<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+								<dt>Felis euismod semper eget lacinia</dt>
+								<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+							</dl>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>...<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>...<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></code></pre></div>
+
+						<div class="bs-callout bs-callout-info" id="callout-type-dl-truncate">
+							<h4>自动截断</h4>
+							<p>通过 <code>text-overflow</code> 属性，水平排列的描述列表将会截断左侧太长的短语。在较窄的视口（viewport）内，列表将变为默认堆叠排列的布局方式。</p>
+						</div>
+					</div>
+
+					<div class="bs-docs-section">
+						<h1 id="code" class="page-header">代码</h1>
+
+						<h2 id="code-inline">内联代码</h2>
+						<p>通过 <code>&lt;code&gt;</code> 标签包裹内联样式的代码片段。</p>
+						<div class="bs-example" data-example-id="inline-code">
+							For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html">For example, <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>section<span class="ni">&amp;gt;</span><span class="nt">&lt;/code&gt;</span> should be wrapped as inline.</code></pre></div>
+
+						<h2 id="code-user-input">用户输入</h2>
+						<p>通过 <code>&lt;kbd&gt;</code> 标签标记用户通过键盘输入的内容。=</p>
+						<div class="bs-example" data-example-id="simple-kbd">
+							To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br> To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html">To switch directories, type <span class="nt">&lt;kbd&gt;</span>cd<span class="nt">&lt;/kbd&gt;</span> followed by the name of the directory.<span class="nt">&lt;br&gt;</span>
+To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span class="nt">&lt;/kbd&gt;</span> + <span class="nt">&lt;kbd&gt;</span>,<span class="nt">&lt;/kbd&gt;&lt;/kbd&gt;</span></code></pre></div>
+
+						<h2 id="code-block">代码块</h2>
+						<p>多行代码可以使用 <code>&lt;pre&gt;</code> 标签。为了正确的展示代码，注意将尖括号做转义处理。</p>
+						<div class="bs-example" data-example-id="simple-pre">
+							<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;pre&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/pre&gt;</span></code></pre></div>
+
+						<p>还可以使用 <code>.pre-scrollable</code> 类，其作用是设置 max-height 为 350px ，并在垂直方向展示滚动条。</p>
+						<h2 id="code-variables">变量</h2>
+						<p>通过 <code>&lt;var&gt;</code> 标签标记变量。</p>
+						<div class="bs-example" data-example-id="simple-var">
+							<p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;var&gt;</span>y<span class="nt">&lt;/var&gt;</span> = <span class="nt">&lt;var&gt;</span>m<span class="nt">&lt;/var&gt;&lt;var&gt;</span>x<span class="nt">&lt;/var&gt;</span> + <span class="nt">&lt;var&gt;</span>b<span class="nt">&lt;/var&gt;</span></code></pre></div>
+
+						<h2 id="code-sample-output">程序输出</h2>
+						<p>通过 <code>&lt;samp&gt;</code> 标签来标记程序输出的内容。</p>
+						<div class="bs-example" data-example-id="simple-samp">
+							<p><samp>This text is meant to be treated as sample output from a computer program.</samp></p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;samp&gt;</span>This text is meant to be treated as sample output from a computer program.<span class="nt">&lt;/samp&gt;</span></code></pre></div>
+					</div>
+
+					<div class="bs-docs-section">
+						<h1 id="tables" class="page-header">表格</h1>
+
+						<h2 id="tables-example">基本实例</h2>
+						<p>为任意 <code>&lt;table&gt;</code> 标签添加 <code>.table</code> 类可以为其赋予基本的样式 — 少量的内补（padding）和水平方向的分隔线。这种方式看起来很多余！？但是我们觉得，表格元素使用的很广泛，如果我们为其赋予默认样式可能会影响例如日历和日期选择之类的插件，所以我们选择将此样式独立出来。</p>
+						<div class="bs-example" data-example-id="simple-table">
+							<table class="table">
+								<caption>Optional table caption.</caption>
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- /example -->
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+						<h2 id="tables-striped">条纹状表格</h2>
+						<p>通过 <code>.table-striped</code> 类可以给 <code>&lt;tbody&gt;</code> 之内的每一行增加斑马条纹样式。</p>
+						<div class="bs-callout bs-callout-danger" id="callout-tables-striped-ie8">
+							<h4>跨浏览器兼容性</h4>
+							<p>条纹状表格是依赖 <code>:nth-child</code> CSS 选择器实现的，而这一功能不被 Internet Explorer 8 支持。</p>
+						</div>
+						<div class="bs-example" data-example-id="striped-table">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- /example -->
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+						<h2 id="tables-bordered">带边框的表格</h2>
+						<p>添加 <code>.table-bordered</code> 类为表格和其中的每个单元格增加边框。</p>
+						<div class="bs-example" data-example-id="bordered-table">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- /example -->
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+						<h2 id="tables-hover-rows">鼠标悬停</h2>
+						<p>通过添加 <code>.table-hover</code> 类可以让 <code>&lt;tbody&gt;</code> 中的每一行对鼠标悬停状态作出响应。</p>
+						<div class="bs-example" data-example-id="hoverable-table">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- /example -->
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+						<h2 id="tables-condensed">紧缩表格</h2>
+						<p>通过添加 <code>.table-condensed</code> 类可以让表格更加紧凑，单元格中的内补（padding）均会减半。</p>
+						<div class="bs-example" data-example-id="condensed-table">
+							<table class="table table-condensed">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td colspan="2">Larry the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- /example -->
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-condensed"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+						<h2 id="tables-contextual-classes">状态类</h2>
+						<p>通过这些状态类可以为行或单元格设置颜色。</p>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
+								<colgroup>
+									<col class="col-xs-1">
+									<col class="col-xs-7">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>Class</th>
+										<th>描述</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<code>.active</code>
+										</th>
+										<td>鼠标悬停在行或单元格上时所设置的颜色</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<code>.success</code>
+										</th>
+										<td>标识成功或积极的动作</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<code>.info</code>
+										</th>
+										<td>标识普通的提示信息或动作</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<code>.warning</code>
+										</th>
+										<td>标识警告或需要用户注意</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<code>.danger</code>
+										</th>
+										<td>标识危险或潜在的带来负面影响的动作</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="bs-example" data-example-id="contextual-table">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Column heading</th>
+										<th>Column heading</th>
+										<th>Column heading</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="active">
+										<th scope="row">1</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="success">
+										<th scope="row">3</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="info">
+										<th scope="row">5</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="warning">
+										<th scope="row">7</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+									<tr class="danger">
+										<th scope="row">9</th>
+										<td>Column content</td>
+										<td>Column content</td>
+										<td>Column content</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- /example -->
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- On rows --&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/tr&gt;</span>
+
+<span class="c">&lt;!-- On cells (`td` or `th`) --&gt;</span>
+<span class="nt">&lt;tr&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/td&gt;</span>
+<span class="nt">&lt;/tr&gt;</span></code></pre></div>
+						<div class="bs-callout bs-callout-warning">
+							<h4>向使用辅助技术的用户传达用意</h4>
+							<p>通过为表格中的一行或一个单元格添加颜色而赋予不同的意义只是提供了一种视觉上的表现，并不能为使用辅助技术 -- 例如屏幕阅读器 -- 浏览网页的用户提供更多信息。因此，请确保通过颜色而赋予的不同意义可以通过内容本身来表达（即在相应行或单元格中的可见的文本内容）；或者通过包含额外的方式 -- 例如应用了 <code>.sr-only</code> 类而隐藏的文本 -- 来表达出来。 </p>
+						</div>
+
+						<h2 id="tables-responsive">响应式表格</h2>
+						<p>将任何 <code>.table</code> 元素包裹在 <code>.table-responsive</code> 元素内，即可创建响应式表格，其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于 768px 宽度时，水平滚动条消失。</p>
+
+						<div class="bs-callout bs-callout-warning" id="callout-tables-responsive-overflow">
+							<h4>垂直方向的内容截断</h4>
+							<p>响应式表格使用了 <code>overflow-y: hidden</code> 属性，这样就能将超出表格底部和顶部的内容截断。特别是，也可以截断下拉菜单和其他第三方组件。 </p>
+						</div>
+						<div class="bs-callout bs-callout-warning" id="callout-tables-responsive-ff-fieldset">
+							<h4>Firefox 和 <code>fieldset</code> 元素</h4>
+							<p>Firefox 浏览器对 <code>fieldset</code> 元素设置了一些影响 <code>width</code> 属性的样式，导致响应式表格出现问题。除非使用我们下面提供的针对 Firefox 的 hack 代码，否则无解：</p>
+							<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@-moz-document</span> <span class="n">url-prefix</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nt">fieldset</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">table-cell</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+							<p>更多信息请参考
+								<a href="https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content/17863685#17863685">this Stack Overflow answer</a>.</p>
+						</div>
+
+						<div class="bs-example" data-example-id="simple-responsive-table">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- /.table-responsive -->
+
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+											<th>Table heading</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+											<td>Table cell</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- /.table-responsive -->
+						</div>
+						<!-- /example -->
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+					</div>
+					<div class="bs-docs-section">
+						<h1 id="images" class="page-header">图片</h1>
+
+						<h2 id="images-responsive">响应式图片</h2>
+						<p>在 Bootstrap 版本 3 中，通过为图片添加 <code>.img-responsive</code> 类可以让图片支持响应式布局。其实质是为图片设置了 <code>max-width: 100%;</code>、 <code>height: auto;</code> 和 <code>display: block;</code> 属性，从而让图片在其父元素中更好的缩放。</p>
+						<p>如果需要让使用了 <code>.img-responsive</code> 类的图片水平居中，请使用 <code>.center-block</code> 类，不要用 <code>.text-center</code>。
+							<a href="../css/#helper-classes-center">请参考助手类章节</a> 了解更多关于 <code>.center-block</code> 的用法。</p>
+						<div class="bs-callout bs-callout-warning" id="callout-images-ie-svg">
+							<h4>SVG 图像和 IE 8-10</h4>
+							<p>在 Internet Explorer 8-10 中，设置为 <code>.img-responsive</code> 的 SVG 图像显示出的尺寸不匀称。为了解决这个问题，在出问题的地方添加 <code>width: 100% \9;</code> 即可。Bootstrap 并没有自动为所有图像元素设置这一属性，因为这会导致其他图像格式出现错乱。</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-responsive"</span> <span class="na">alt=</span><span class="s">"Responsive image"</span><span class="nt">&gt;</span></code></pre></div>
+
+						<h2 id="images-shapes">图片形状</h2>
+						<p>通过为 <code>&lt;img&gt;</code> 元素添加以下相应的类，可以让图片呈现不同的形状。</p>
+						<div class="bs-callout bs-callout-danger" id="callout-images-ie-rounded-corners">
+							<h4>跨浏览器兼容性</h4>
+							<p>请时刻牢记：Internet Explorer 8 不支持 CSS3 中的圆角属性。</p>
+						</div>
+						<div class="bs-example bs-example-images" data-example-id="image-shapes">
+							<img data-src="holder.js/140x140" class="img-rounded" alt="A generic square placeholder image with rounded corners">
+							<img data-src="holder.js/140x140" class="img-circle" alt="A generic square placeholder image where only the portion within the circle circumscribed about said square is visible">
+							<img data-src="holder.js/140x140" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-rounded"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-circle"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"img-thumbnail"</span><span class="nt">&gt;</span></code></pre></div>
+					</div>
+
+					<div class="bs-docs-section">
+						<h1 id="helper-classes" class="page-header">辅助类</h1>
+
+						<h3 id="helper-classes-colors">情境文本颜色</h3>
+						<p>通过颜色来展示意图，Bootstrap 提供了一组工具类。这些类可以应用于链接，并且在鼠标经过时颜色可以还可以加深，就像默认的链接一样。</p>
+						<div class="bs-example" data-example-id="contextual-colors-helpers">
+							<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+							<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+							<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+							<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+							<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span></code></pre></div>
+						<div class="bs-callout bs-callout-info" id="callout-helper-context-color-specificity">
+							<h4>处理差异</h4>
+							<p>Sometimes emphasis classes cannot be applied due to the specificity of another selector. In most cases, a sufficient workaround is to wrap your text in a <code>&lt;span&gt;</code> with the class.</p>
+						</div>
+						<div class="bs-callout bs-callout-warning" id="callout-helper-context-color-accessibility">
+							<h4>Conveying meaning to assistive technologies</h4>
+							<p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (the contextual colors are only used to reinforce meaning that is already present in the text/markup), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
+						</div>
+
+						<h3 id="helper-classes-backgrounds">情境背景色</h3>
+						<p>和情境文本颜色类一样，使用任意情境背景色类就可以设置元素的背景。链接组件在鼠标经过时颜色会加深，就像上面所讲的情境文本颜色类一样。</p>
+						<div class="bs-example bs-example-bg-classes" data-example-id="contextual-backgrounds-helpers">
+							<p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+							<p class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+							<p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+							<p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bg-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span></code></pre></div>
+						<div class="bs-callout bs-callout-info" id="callout-helper-bg-specificity">
+							<h4>处理差异</h4>
+							<p>Sometimes contextual background classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a <code>&lt;div&gt;</code> with the class.</p>
+						</div>
+						<div class="bs-callout bs-callout-warning" id="callout-helper-bg-accessibility">
+							<h4>Conveying meaning to assistive technologies</h4>
+							<p>As with
+								<a href="#helper-classes-colors">contextual colors</a>, ensure that any meaning conveyed through color is also conveyed in a format that is not purely presentational.</p>
+						</div>
+
+						<h3 id="helper-classes-close">关闭按钮</h3>
+						<p>通过使用一个象征关闭的图标，可以让模态框和警告框消失。</p>
+						<div class="bs-example" data-example-id="close-icon">
+							<p><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;/button&gt;</span></code></pre></div>
+
+						<h3 id="helper-classes-carets">三角符号</h3>
+						<p>通过使用三角符号可以指示某个元素具有下拉菜单的功能。注意，
+							<a href="../components/#btn-dropdowns-dropup">向上弹出式菜单</a>中的三角符号是反方向的。</p>
+						<div class="bs-example" data-example-id="caret">
+							<span class="caret"></span>
+						</div>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></div>
+
+						<h3 id="helper-classes-floats">快速浮动</h3>
+						<p>通过添加一个类，可以将任意元素向左或向右浮动。<code>!important</code> 被用来明确 CSS 样式的优先级。这些类还可以作为 mixin（参见 less 文档） 使用。</p>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-right"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></div>
+						<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Classes
+</span><span class="nc">.pull-left</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.pull-right</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage as mixins
+</span><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.pull-left</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.another-element</span> <span class="p">{</span>
+  <span class="nc">.pull-right</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+						<div class="bs-callout bs-callout-warning" id="callout-helper-pull-navbar">
+							<h4>不能用于导航条组件中</h4>
+							<p>排列导航条中的组件时可以使用这些工具类：<code>.navbar-left</code> 或 <code>.navbar-right</code> 。
+								<a href="../components/#navbar-component-alignment">参见导航条文档</a>以获取更多信息。</p>
+						</div>
+
+						<h3 id="helper-classes-center">让内容块居中</h3>
+						<p>为任意元素设置 <code>display: block</code> 属性并通过 <code>margin</code> 属性让其中的内容居中。下面列出的类还可以作为 mixin 使用。</p>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"center-block"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></div>
+						<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Class
+</span><span class="nc">.center-block</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage as a mixin
+</span><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.center-block</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+						<h3 id="helper-classes-clearfix">清除浮动</h3>
+						<p><strong>通过为父元素</strong>添加 <code>.clearfix</code> 类可以很容易地清除浮动（<code>float</code>）。这里所使用的是 Nicolas Gallagher 创造的
+							<a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro clearfix</a> 方式。此类还可以作为 mixin 使用。</p>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Usage as a class --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></div>
+						<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Mixin itself
+</span><span class="nc">.clearfix</span><span class="o">()</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nd">:before</span><span class="o">,</span>
+  <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s2">" "</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">table</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">&amp;</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage as a mixin
+</span><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.clearfix</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+						<h3 id="helper-classes-show-hide">显示或隐藏内容</h3>
+						<p><code>.show</code> 和 <code>.hidden</code> 类可以强制任意元素显示或隐藏(<strong>对于屏幕阅读器也能起效</strong>)。这些类通过 <code>!important</code> 来避免 CSS 样式优先级问题，就像
+							<a href="#helper-classes-floats">quick floats</a> 一样的做法。注意，这些类只对块级元素起作用，另外，还可以作为 mixin 使用。</p>
+						<p><code>.hide</code> 类仍然可用，但是它不能对屏幕阅读器起作用，并且从 v3.0.1 版本开始就<strong>不建议使用</strong>了。请使用 <code>.hidden</code> 或 <code>.sr-only</code> 。</p>
+						<p>另外，<code>.invisible</code> 类可以被用来仅仅影响元素的可见性，也就是所，元素的 <code>display</code> 属性不被改变，并且这个元素仍然能够影响文档流的排布。</p>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"show"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hidden"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre></div>
+						<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Classes
+</span><span class="nc">.show</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.hidden</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.invisible</span> <span class="p">{</span>
+  <span class="nl">visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage as mixins
+</span><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.show</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.another-element</span> <span class="p">{</span>
+  <span class="nc">.hidden</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+						<h3 id="helper-classes-screen-readers">屏幕阅读器和键盘导航</h3>
+						<p><code>.sr-only</code> 类可以对<strong>屏幕阅读器以外</strong>的设备隐藏内容。<code>.sr-only</code> 和 <code>.sr-only-focusable</code> 联合使用的话可以在元素有焦点的时候再次显示出来（例如，使用键盘导航的用户）。对于遵循
+							<a href="../getting-started/#accessibility">可访问性的最佳实践</a> 很有必要。这个类也可以作为 mixin 使用。</p>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span> <span class="na">href=</span><span class="s">"#content"</span><span class="nt">&gt;</span>Skip to main content<span class="nt">&lt;/a&gt;</span></code></pre></div>
+						<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Usage as a mixin
+</span><span class="nc">.skip-navigation</span> <span class="p">{</span>
+  <span class="nc">.sr-only</span><span class="o">()</span><span class="p">;</span>
+  <span class="nc">.sr-only-focusable</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+						<h3 id="helper-classes-image-replacement">图片替换</h3>
+						<p>使用 <code>.text-hide</code> 类或对应的 mixin 可以用来将元素的文本内容替换为一张背景图。</p>
+						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"text-hide"</span><span class="nt">&gt;</span>Custom heading<span class="nt">&lt;/h1&gt;</span></code></pre></div>
+						<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Usage as a mixin
+</span><span class="nc">.heading</span> <span class="p">{</span>
+  <span class="nc">.text-hide</span><span class="o">()</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+					</div>
+
+					
+					
+					
+				</div>
+			</div>
+		</div>
+
+		
+		<link rel="import " href="_bottom.html?__inline" />
+
+	</body>
+
+</html>

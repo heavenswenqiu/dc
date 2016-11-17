@@ -1,0 +1,103 @@
+//配色
+@import 'color';
+//common
+@each $key,$value in $h
+{
+    #{$key}{font-size:$value+px;} 
+    
+    };
+a{
+    color: inherit;
+}
+a:hover{
+    text-decoration:none ;
+};
+.m-fixed{
+    position: fixed !important;
+}
+//过渡效果
+[data-transition]{
+    transition:all $transition-time ;
+    -webkit-transition:all $transition-time ;
+    
+    
+        
+}
+[data-transition='translate-x']{
+   left: 100%;
+   &.active{
+   transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  
+   } 
+}
+
+
+//容器
+.m-header,.m-tab{
+    position: relative;
+    //为了在固定时保持100%
+    left: 0;
+    width: 100%; 
+}
+
+.m-header{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 44px;
+    line-height: 44px;
+    background-color:$bg ;
+    color: $header-color;
+    border-bottom:1px solid $border-color ;
+    .m-title{
+        line-height: inherit;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        margin-right: 50px;
+        margin-left: 50px;
+        text-align: center;
+        font-weight: normal;
+    }
+    a{
+        line-height: inherit;
+        height:inherit;
+        font-size:14px ;
+    }
+    //最上方
+    &.m-fixed{
+        top:0;
+    }
+}
+.m-tab{
+    display: table;
+    padding-top: 15px;
+    a{
+        text-align: center;
+        display: table-cell;
+    }
+    //固定最下方
+   &.m-fixed{
+       border-top:1px solid $border-color ;
+       height: 49px;
+       bottom: 0;
+   } 
+}
+.m-fixed.m-header~.m-content{
+    margin-top: 44px;
+}
+.m-fixed.m-header~.m-content{
+    margin-bottom: 49px;
+}
+//划出页面
+.m-page{
+    @extend .m-fixed;
+    @extend [data-transition];
+    @extend [data-transition='translate-x'];
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color:$page-bg ;
+}

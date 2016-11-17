@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>按钮</title>
+	</head>
+
+	<body>
+		<header class="panel-heading bg-primary">
+			按钮
+		</header>
+		<div class="panel  clearfix">
+			<h2 class="panel-heading">目录</h2>
+			<ul class="list-unstyled panel-body">
+				<li>
+					<a href="#form">基础表单</a>
+				</li>
+				<li>
+					<a href="#form-style">表单样式属性</a>
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<section class="col-sm-6 ">
+				<div class="panel">
+					<header class="panel-heading">
+						样式
+					</header>
+
+					<ul class="panel-body">
+						<li class="form-group">
+							<button type="button" class="btn btn-default">（默认样式）Default</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-primary">（深蓝）Primary</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-success">（绿色）Success</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-info">（蓝色）Info</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-warning">（橙色）Warning</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-danger">（红色）Danger</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-link">（无样式）Link</button>
+
+						</li>
+						<li class="form-group">
+							<div class="btn-group">
+								<button class="btn">按钮组</button>
+								<button class="btn">第二个</button>
+								<button class="btn">第三个</button>
+							</div>
+						</li>
+						<li class="form-group">
+							<button data-toggle="button" class="btn " type="button">状态切换按钮</button>
+						</li>
+						<li class="form-group">
+							<div class="btn-group" data-toggle="buttons">
+								<label class="btn btn-primary active">
+<input type="radio" name="options" id="option1" checked> 切换按钮组
+</label>
+								<label class="btn btn-primary">
+<input type="radio" name="options" id="option2"> 单选1
+</label>
+								<label class="btn btn-primary">
+<input type="radio" name="options" id="option3"> 单选2
+</label>
+							</div>
+						</li>
+						<li class="form-group">
+							<button id="loadingBtnExample" type="button" class="btn btn-primary" data-loading-text="正在加载...">加载状态</button>
+							<script>
+								$('#loadingBtnExample').on('click', function() {
+									var $btn = $(this);
+									//获得data-loading-text 的文字
+									$btn.button('loading');
+									// 此处使用 setTimeout 来模拟你的复杂功能逻辑
+									setTimeout(function() {
+										$btn.button('reset');//还原状态
+									}, 2000);
+								});
+							</script>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="col-sm-6 ">
+				<div class="panel">
+					<header class="panel-heading">
+						大小
+					</header>
+
+					<ul class="panel-body">
+						<li class="form-group">
+							<button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>
+							<button type="button" class="btn btn-default btn-lg">（大按钮）Large button</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-primary">（默认尺寸）Default button</button>
+							<button type="button" class="btn btn-default">（默认尺寸）Default button</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>
+							<button type="button" class="btn btn-default btn-sm">（小按钮）Small button</button>
+						</li>
+						<li class="form-group">
+							<button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small button</button>
+							<button type="button" class="btn btn-default btn-xs">（超小尺寸）Extra small button</button> </li>
+						<li class="form-group">
+							<button type="button" class="btn btn-primary btn-block">块按钮</button>
+						</li>
+					</ul>
+				</div>
+				<div class="panel">
+					<header class="panel-heading">
+						加载按钮
+					</header>
+					<ul class='panel-body'>
+						<li>
+							<button></button>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+	</body>
+
+</html>

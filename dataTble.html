@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<!-- dt-->
+
+	<link rel="stylesheet" href="assets/datatable/css/jquery.dataTables.css" />
+	<!--固定列 dt-->
+
+	<link rel="stylesheet" href="assets/datatable/css/fixedColumns.dataTables.min.css" />
+	<style>
+		.selected {
+			background: #006699;
+		}
+		
+		td,
+		tr {
+			background: #fff;
+			min-width: 20px;
+			min-height: 20px;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<section class="panel">
+			<header class="panel-heading bg-primary">
+				JQuety.dataTable
+			</header>
+			<div class="panel-body text-center ">
+				<h2>Datatables是一款jquery表格插件。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能</h2>
+				<div class="text-center panel-body">
+					<a class="" href="http://datatables.club/">Datatables中文网</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="panel">
+			<!--search-->
+			<div class="panel-body">
+				<select class='column'>
+					<option value=".name">name</option>
+					<option value=".class">class</option>
+				</select>
+				<input type="search" placeholder="搜索" class="search_value" />
+				<input type="button" class="btn search" value="search"  />
+			</div>
+			<!-- table-->
+			<div class="panel-body">
+				<table id="table" class="table" width="100%"></table>
+			</div>
+			<!--btn option-->
+			<div class="panel-body">
+				<button type="button" class="add">add row</button>
+				<button type="button" class="del">del row</button>
+			</div>
+
+		</section>
+		<ul class="text-warning">
+			<li>双击修改单项</li>
+		</ul>
+		<hr />
+		<ol style='color:red'>
+			<li>Datatable 和 datatable配置可以共用但api的不一样的</li>
+			<li>Datatable 数组的值必须对应键值才能显示</li>
+			<li>table.clear().draw() 可以清除表格数据</li>
+		</ol>
+		<script src="lib/jquery-2.1.0.js"></script>
+		<!--dataTable -->
+		<script src="assets/datatable/js/jquery.dataTables.min.js"></script>
+		<!--固定列 dt-->
+		<script src="assets/datatable/js/dataTables.fixedColumns.min.js"></script>
+		<script>
+			$(function() {
+				var columns = [{
+					"data": "name", //key
+					"defaultContent": "", //默认内容
+					"render": false, //显示第[num]
+					"jQueryUI": false,
+					"title": "name", //标题
+					"visible": true, //显示
+					"class": "text-center name",
+					"createdCell": function(td, cellData, rowData, row, col) {
+
+					}, //生成时回调,重绘时将不在调用
+					"orderable": false, //不排序
+
+				}, {
+					"data": "class",
+					"title": "class", //标题
+					"defaultContent": "", //默认内容
+					"class": "class",
+
+				}, {
+					"data": "size",
+					"title": "size", //标题
+
+					"defaultContent": "", //默认内容
+
+				}, {
+					"data": "function",
+					"title": "function", //标题
+
+					"defaultContent": "", //默认内容
+
+				}, {
+					"data": "text",
+					"title": "备注", //标题
+
+					"defaultContent": "", //默认内容
+
+				}, {
+					"data": "no",
+					"title": "版本", //标题
+
+					"defaultContent": "", //默认内容
+
+				}, {
+					"data": "start_date",
+					"title": "开始日期", //标题
+
+					"defaultContent": "", //默认内容
+
+				}, {
+					"data": "salary",
+					"title": "option1", //标题
+
+					"defaultContent": "", //默认内容
+
+				}];
+				var datas = [{
+					"name": "dataTable",
+					"class": "jQuery",
+					"function": 'DataTbale',
+					"size": "400",
+					"start_date": "2011/04/25",
+					"office": "Edinburgh",
+					"extn": 5421
+				}, ];
+
+				var table = $('#table').DataTable({
+					"filter": false,
+					"destroy": true, //允许重绘
+					"order": [], //初始化排序
+					"ordering": true, //关闭表格的排序功能
+					searching: true, //本地 searcher
+					"autoWidth": true, //width auto
+					"jQueryUI": false, //需要引入对应的css
+					"deferRender": true, //延迟渲染
+					"info": false, //table bottom text
+					"data": datas,
+					"columns": columns,
+					scrollX: true,
+					//scrollY: 150,
+					scrollCollapse: true,
+					paging: false,
+					fixedColumns: {
+						leftColumns: 2,
+						rightColumns: 0
+					}
+
+				});
+
+				//add data 
+				table.rows.add([{
+					"name": "add",
+					"class": "System Architect",
+					"salary": "$3,120",
+					"start_date": "2011/04/25",
+					"office": "Edinburgh",
+					"extn": ''
+				}, {
+					"name": "add1",
+					"class": "System Architect",
+					"salary": "$3,120",
+					"start_date": "2011/04/25",
+					"office": "Edinburgh",
+					"extn": ''
+				}, ]).draw();
+
+				//search data in column
+				$(".search").on("click", function() {
+						var column = $(".column").val(); //获得搜索的行号
+
+						var value = $(".search_value").val(); //获得搜索的内容
+
+						table.columns(column).search(value).draw();
+						//searching false 时无法触发,可以用index或class搜索
+					})
+					//get edits td data
+				$("#table").on("dblclick", 'td', function(e) {
+					var value = table.cell(this).data();
+
+					$(this).html("<input style='width: 100%;' type='text'value='" + value + "' />");
+					$(this).children('input').focus().on("blur", editor_blur);
+					e.stopPropagation();
+				})
+
+				function editor_blur() {
+					$(this).off("blur", editor_blur);
+					var value = $(this).val();
+					var $td = $(this).parent('td');
+					table.cell($td).data(value).draw(); //修改
+				}
+				//set row data (selected)
+				$("#table").on("click", 'tr', function() {
+					$(this).toggleClass("selected");
+				})
+
+				//del rows
+				$(".del").on("click", function() {
+						table.rows(".selected").remove().draw();
+
+					})
+					//clear tabel
+				$(".clear").click(function() {
+					table.clear().draw();
+				})
+
+				//add one in table's' last
+				$(".add").on("click", function() {
+					table.row.add({"name":"new"}).draw();
+					//添加数组的时候会出现无数据
+				})
+			})
+		</script>
+	</body>
+
+</html>

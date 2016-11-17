@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>视频</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel=" stylesheet " href="../../assets/zui/css/zui.css" />
+		<link rel="stylesheet " href="../../assets/srcollbar/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/tab-video.scss" />
+	</head>
+
+	<body>
+		<section class="tab-video container ">
+			<!--tb菜单-->
+			<aside class="tab-side">
+				<button type="button" class="tab-side-btn">
+					<i class="icon-bar"></i>
+					<i class="icon-bar"></i>
+					<i class="icon-bar"></i>
+				</button>
+				<div class="tab-list">
+					<ul class="list-unstyled ">
+						<li class="active">
+							<a data-video='http://www.w3school.com.cn/i/movie.ogg'>
+								<img src="img/girl2.jpg" class="img-responsive " alt="1" />
+								<h4>带预览图1</h4>
+							</a>
+						</li>
+						<li>
+							<a data-video='http://fashioncn.tv/img_test/video/test0.mp4'>
+								<img src="img/girl2.jpg" class="img-responsive " alt="1" />
+								<h4>带预览图2带预览图2带预览图2带预览图2</h4>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/girl2.jpg" class="img-responsive " alt="1" />
+								<h4>带预览图3</h4>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/girl2.jpg" class="img-responsive " alt="1" />
+								<h4>带预览图4</h4>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/girl2.jpg" class="img-responsive " alt="1" />
+								<h4>带预览图5</h4>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/girl2.jpg" class="img-responsive " alt="1" />
+								<h4>带预览图6</h4>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/girl2.jpg" class="img-responsive " alt="1" />
+								<h4>带预览图7</h4>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</aside>
+			<!--tb main-->
+			<div class="tab-show ">
+				<!--<img src="img/girl2.jpg" class="img-responsive " />-->
+				<video id="video" src="http://fashioncn.tv/img_test/video/test0.mp4" controls="controls" width="100%">
+					您的浏览器不支持视频
+				</video>
+			</div>
+			<div class="tab-text ">
+				<p class="tab-title ">视频播放标题</p>
+				<p><small class="tab-title-e ">备注部分</small></p>
+			</div>
+
+		</section>
+		<!--
+     	  @require ../lib/jquery.js
+        -->
+		<script src="../../lib/jquery.js"></script>
+		<script src="../../assets/srcollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="js/tab-video.js"></script>
+	</body>
+
+</html>
