@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery-zclip</title>
+	</head>
+
+	<body>
+		<section class="panel panel-body text-center">
+
+			<h1 class="text-center">jquery-zclip</h1> from:
+			<a class="text-center" href="https://github.com/patricklodder/jquery-zclip">patricklodder/jquery-zclip</a>
+		</section>
+		<section class="panel panel-body">
+
+			<input type="text" value="www.daimajiayuan.com" id="link"><span id="copyBtn" class="">复制链接</span>
+
+			<hr />
+			<code>jQuery({selector}).zclip({options});</code>
+			<ul>
+				<h3>options</h3>
+				<li>path:'ZeroClipboard.swf' 插件位置</li>
+				<li>copy：null 设置复制的内容</li>
+				<li>afterCopy：null 复制后调用</li>
+				<li>beforeCopy：null 复制前调用</li>
+				<li>clickAfter：true </li>
+				<li>setHandCursor：true </li>
+				<li>setCSSEffects： true </li>
+			</ul>
+		</section>
+		<script>
+			$(function() {
+				$.getScript("assets/jquery-zclip/js/jquery.zclip.js", function() {
+					$('#copyBtn').zclip({
+						path: "assets/jquery-zclip/js/ZeroClipboard.swf",
+						copy: function() {
+							//返回一个复制的内容
+							return $('#link').val();　　　　　
+						},
+						afterCopy: function() {
+							//复制成功提示
+							alert("复制成功")
+						}
+					});
+				})
+			});
+		</script>
+	</body>
+
+</html>

@@ -4,6 +4,9 @@
 .navbar-btn {
     display: none;
 }
+//icon 
+$icon-h: 3;
+$icon-margin: 4;
 @media(max-width:768px) {
     .navbar.m-full {
         transition: all 0.3s;
@@ -34,14 +37,14 @@
                 display: block;
                 margin: 0 auto;
                 width: 80%;
-                height: 3px;
+                height: $icon-h+px;
                 border-radius: 3px;
                 background-color: #ccc;
                 transition: all 0.3s;
                 -webkit-transition: all 0.3s;
             }
             .icon-bar + .icon-bar {
-                margin-top: 4px;
+                margin-top: $icon-margin+px;
             }
         }
         /*子集*/
@@ -69,26 +72,16 @@
             }
             /*按钮*/
             .icon-bar {
-                &:first-child,
-                &:nth-child(3) {
-                    position: absolute;
-                    top: 13px;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                    transition-delay: 0.3s;
-                    -webkit-transition-delay: 0.3s;
-                }
                 &:first-child {
-                    transform: rotate(-45deg);
-                    -webkit-transform: rotate(-45deg);
+                    transform: translateY($icon-h+$icon-margin+px) rotate(-45deg);
+                    -webkit-transform: translateY($icon-h+$icon-margin+px) rotate(-45deg);
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:nth-child(3) {
-                    transform: rotate(45deg);
-                    -webkit-transform: rotate(45deg);
+                    transform: translateY(-7px) rotate(45deg);
+                    -webkit-transform: translateY(-7px) rotate(45deg);
                 }
             }
             .navbar-collapse {
